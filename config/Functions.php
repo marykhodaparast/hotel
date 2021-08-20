@@ -6,11 +6,14 @@ class Functions{
         $zip_code_length = strlen((string)$zip_code);
         $error = null;
         if($zip_code != null) {
-            if(!is_numeric($zip_code) && $zip_code > 0){
+            if(!is_numeric($zip_code)){
                 $error = "zip_code should contain numbers";
             }
             if($zip_code_length != 5) {
                 $error = "zip_code must contain 5 characters";
+            }
+            if(is_numeric($zip_code) && $zip_code <= 0) {
+                $error = "zip_code can not be negative number";
             }
         }
        
