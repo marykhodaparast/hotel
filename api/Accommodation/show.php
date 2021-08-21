@@ -7,10 +7,10 @@ $database = new Database();
 $functions = new Functions();
 $error = null;
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING);
-$foundLocation = $database->getvalues('locations','WHERE id = :id and is_deleted = 0',["id" => $id]);
-$error = $functions->validateLocationDelete(isset($foundLocation->scalar));
+$foundAccommodation = $database->getvalues('accommodations','WHERE id = :id and is_deleted = 0',["id" => $id]);
+$error = $functions->validateAccommodationDelete(isset($foundAccommodation));
 $result = [
-    'data' => $foundLocation ? $foundLocation : null,
+    'data' => $foundAccommodation ? $foundAccommodation : null,
     'error' => $error,
     'message' => null
 ];

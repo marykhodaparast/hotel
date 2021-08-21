@@ -5,8 +5,7 @@ require '../../vendor/autoload.php';
 
 $database = new Database();
 $functions = new Functions();
-//$id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING);
-$values = $database->getvalues('locations','WHERE is_deleted = 0', [], true);
+$values = $database->getvalues('accommodations','WHERE is_deleted = 0', [], true);
 $result = [
     'data' => $values,
     'error' => null,

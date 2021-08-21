@@ -36,6 +36,14 @@ class Functions{
         return $error;
 
     }
+    public function validateAccommodationDelete($item) 
+    {
+        $error = null;
+        if(!$item) {
+            $error = "The accommodation with the id not found!";
+        }
+        return $error; 
+    }
     public function validateAccommodationCreate($locations_id, $name, $category, $rating, $reputatation, $price, $availability, $file_size)
     {
 

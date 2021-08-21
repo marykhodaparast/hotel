@@ -14,7 +14,6 @@ $rating = filter_input(INPUT_POST, 'rating', FILTER_SANITIZE_STRING);
 $category = filter_input(INPUT_POST, 'category', FILTER_SANITIZE_STRING);
 $locations_id = filter_input(INPUT_POST, 'locations_id', FILTER_SANITIZE_STRING);
 $reputation = filter_input(INPUT_POST, 'reputation', FILTER_SANITIZE_STRING);
-//$reputationBadge = filter_input(INPUT_POST, 'reputationBadge', FILTER_SANITIZE_STRING);
 $price = filter_input(INPUT_POST, 'price', FILTER_SANITIZE_STRING);
 $availability = filter_input(INPUT_POST, 'availability', FILTER_SANITIZE_STRING);
 $reputationBadge = null;
@@ -59,19 +58,6 @@ $values = [
     'price' => $price,
     'availability' => $availability
 ];
-// $values = [
-//     "city" => $city,
-//     "state" => $state,
-//     "country" => $country,
-//     "zip_code" => $zip_code,
-//     "address" => $address,
-//     "created_at" => $now,
-//     "updated_at" => $now
-// ];
-// $error = $functions->validateZipCode($zip_code, 'create');
-// if ($error == null) {
-//     $database->insert($values, $database->getPdo(), 'locations');
-// }
 $result = [
     'data' => $error == null ? $values : null,
     'error' => $error,
