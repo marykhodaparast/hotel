@@ -1,0 +1,423 @@
+{
+	"info": {
+		"_postman_id": "2ed2653f-2cac-4cef-b8cf-d08c0fbd5053",
+		"name": "Hotel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Location",
+			"item": [
+				{
+					"name": "Store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "city",
+									"value": "ererre",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "Morelos",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "Mexico",
+									"type": "text"
+								},
+								{
+									"key": "zip_code",
+									"value": "45673",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Boulevard Díaz Ordaz No. 9 Cantarranas",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/location/create.php",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"location",
+								"create.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "city",
+									"value": "dfdf",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "state",
+									"value": "salam",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "country",
+									"value": "dff",
+									"type": "text"
+								},
+								{
+									"key": "zip_code",
+									"value": "89743",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "dfdff",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/location/update.php?id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"location",
+								"update.php"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/location/delete.php?id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"location",
+								"delete.php"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/location/show.php?id=2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"location",
+								"show.php"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/location/index.php",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"location",
+								"index.php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Accommodation",
+			"item": [
+				{
+					"name": "Store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/new/Pictures/images (2).png"
+								},
+								{
+									"key": "name",
+									"value": "Example name",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "hotel",
+									"type": "text"
+								},
+								{
+									"key": "locations_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "reputation",
+									"value": "700",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "availability",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/accommodation/create.php",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"accommodation",
+								"create.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/new/Pictures/jessica-fadel-pKWnzZ-1j6g-unsplash.jpg"
+								},
+								{
+									"key": "name",
+									"value": "dffddfdfdfdfdf",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "hostel",
+									"type": "text"
+								},
+								{
+									"key": "locations_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "reputation",
+									"value": "400",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1200",
+									"type": "text"
+								},
+								{
+									"key": "availability",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/accommodation/update.php?id=2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"accommodation",
+								"update.php"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/accommodation/delete.php?id=6",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"accommodation",
+								"delete.php"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/accommodation/show.php?id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"accommodation",
+								"show.php"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/accommodation/index.php",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"accommodation",
+								"index.php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost/php-test"
+		}
+	]
+}
