@@ -15,7 +15,7 @@ $zip_code = filter_input(INPUT_POST, 'zip_code', FILTER_SANITIZE_STRING);
 $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
 $now = Carbon::now()->format('Y-m-d H:i:s');
 $foundLocation = $database->getvalues('locations','WHERE id = :id and is_deleted = 0',["id" => $id]);
-$error = $functions->validateZipCode($zip_code,'update', isset($foundLocation->scalar));
+$error = $functions->validateZipCode($zip_code,'update', !$foundLocation );
 if($error == null) {
     $values = [
         "city" => $city == null ? $foundLocation->city : $city,

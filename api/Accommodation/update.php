@@ -31,7 +31,11 @@ if(isset($_FILES['image'])) {
 
 $now = Carbon::now()->format('Y-m-d H:i:s');
 $foundAccommodation = $database->getvalues('accommodations', 'WHERE id = :id and is_deleted = 0', ["id" => $id]);
-$error = $functions->validateAccommodationCreate($locations_id, $name, $category, $rating, $reputation, $price, $availability, $file ? $file['size'] : 0);
+if(!$foundAccommodation) {
+    $error = "The accommodation not found!";
+} else {
+    $error = $functions->validateAccommodationCreate($locations_id, $name, $category, $rating, $reputation, $price, $availability, $file ? $file['size'] : 0);
+}
 if ($foundAccommodation && $error == null) {
     $r = $reputation == null ? $foundAccommodation->reputation : $reputation;
     if ($r <= 500) {

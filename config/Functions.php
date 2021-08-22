@@ -71,7 +71,7 @@ class Functions{
         if(!is_numeric($rating)){
             $error = "The rating should be an integer";
         }
-        if($rating < 0 && $rating > 5) {
+        if($rating < 0 || $rating > 5) {
             $error = "The rating should be between 0 & 5";
         }
         if($reputatation < 0 || $reputatation > 1000) {
